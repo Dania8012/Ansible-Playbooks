@@ -1,0 +1,22 @@
+---
+- name: Install and Start Nginx
+  hosts: server1
+  become: yes
+  tasks:
+  - name: Install Nginx
+    apt:
+      name: nginx
+      state: present
+  - name: Start Nginx
+    service:
+      name: nginx
+      state: started
+  - name: Check Nginx Status
+    systemd:
+      name: nginx
+      state: started
+    register: nginx_status
+  - name: Display Nginx Service Status
+    debug:
+      var: nginx_status
+
