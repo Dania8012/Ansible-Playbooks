@@ -1,2 +1,2 @@
-localhost
-
+[servers]
+34.244.64.138 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/Users/daniaalrefai/Desktop/server-1-key.pem
