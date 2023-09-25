@@ -1,6 +1,6 @@
 ---
 - name: Install and Start Nginx
-  hosts: server1
+  hosts: servers
   become: yes
   tasks:
   - name: Install Nginx
